@@ -1,3 +1,8 @@
+前言  
+
+首先这是一个自用脚本，不能满足所有人的需求。所以私信我也是没有用的。 
+~~能用就行，要啥UI~~
+
 
 功能
 
@@ -27,8 +32,6 @@ wget https://raw.githubusercontent.com/pumpkin4gb/bzz/main/step1.sh && chmod 777
 对节点1提票：  
 cashout1.sh cashout-all
 其他节点同理。正常会自动提，无须手动。  
-~~如果运行cashout1.sh时报1634+错误，是旧版本step1.sh的bug。运行fix_port.sh修复即可~~  
-新版本已修复。
 
 
 获取地址  
@@ -36,3 +39,10 @@ cashout1.sh cashout-all
 ./step3.sh  
 如提示无step3.sh文件，手动下载step3.sh上传即可。  
 若有获取的节点地址为空，大概率是服务器配置不够，小概率是endpoint爆满。
+
+
+其他问题
+~~如果运行cashout1.sh时报1634+错误，运行fix_port.sh修复即可~~  
+~~如果发现没有自动提票，运行fix_cash.sh修复即可~~  
+~~别骂了别骂了，在改了在改了~~
+新版本已修复。

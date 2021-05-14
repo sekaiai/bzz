@@ -12,7 +12,7 @@ step1.sh:
 配置节点。  
 step2.sh:  
 开启节点，设置自动兑付，下载钱包文件。钱包文件不能直接导入小狐狸，请自行转换。  
-转换可参考：https://github.com/ethersphere/exportSwarmKey/releases  
+转换可参考：https://github.com/ethersphere/exportSwarmKey  
 step3.sh:  
 下载合约地址、钱包地址的txt文件。
 
@@ -35,5 +35,4 @@ cashout1.sh cashout-all
 ## 其他问题  
 ~~如果运行cashout1.sh时报1634+错误，运行fix_port.sh修复即可~~  
 ~~如果发现没有自动提票，运行fix_cash.sh修复即可~~  
-~~别骂了别骂了，在改了在改了~~  
 新版本已修复。

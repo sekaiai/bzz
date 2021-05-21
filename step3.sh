@@ -5,7 +5,6 @@ for ((i=1; i<=tCnt; i ++))
 do
 dpi_port=`cat node${i}.yaml | grep 'debug-api-addr: 127.0.0.1:' | awk -F ':' '{print $3}'`
 echo "节点${i}的端口为：${dpi_port}"
-echo "检查cashout${i}.sh……"
 echo "节点${i}的钱包地址和合约地址:"
 address=`curl -s localhost:${dpi_port}/addresses | jq .ethereum`
 echo "address:${address}"

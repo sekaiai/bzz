@@ -36,4 +36,5 @@ cashout1.sh cashout-all
 ## 其他问题  
 ~~如果运行cashout1.sh时报1634+错误，运行fix_port.sh修复即可~~  
 ~~如果发现没有自动提票，运行fix_cash.sh修复即可~~  
+~~以上问题仅存在于0.5.3版bee早期脚本~~  
 新版本已修复。

@@ -35,7 +35,10 @@ cat>node${tCnt}.yaml<<EOF
 api-addr: :$((1534+${tCnt}))
 #config: /root/node${tCnt}.yaml
 data-dir: /var/lib/bee/node${tCnt}
-db-capacity: 15000000
+cache-capacity: "2000000"
+block-time: "15"
+bootnode:
+- /dnsaddr/bootnode.ethswarm.org
 debug-api-addr: :$((1634+${tCnt}))
 #debug-api-addr: 127.0.0.1:$((1634+${tCnt}))
 debug-api-enable: true

@@ -32,7 +32,7 @@ full-node: true
 EOF
 done
 wget https://github.com/ethersphere/bee/releases/download/v0.6.1/bee_0.6.1_amd64.deb
-sudo dpkg -i bee_0.6.0_amd64.deb
+sudo dpkg -i bee_0.6.1_amd64.deb
 for ((i=1; i<=tCnt; i ++))
 do
 screen -dmS bee$i

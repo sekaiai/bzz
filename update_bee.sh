@@ -19,7 +19,10 @@ screen -S bee$i -X quit
 cat>node${i}.yaml<<EOF
 api-addr: :$((1534+${i}))
 data-dir: /var/lib/bee/node${i}
-db-capacity: 20000000
+cache-capacity: "2000000"
+block-time: "15"
+bootnode:
+- /dnsaddr/bootnode.ethswarm.org
 debug-api-addr: :$((1634+${i}))
 #debug-api-addr: 127.0.0.1:$((1634+${i}))
 debug-api-enable: true

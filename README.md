@@ -1,7 +1,7 @@
 ## 前言  
 这是一个自用脚本，因此不能满足所有人的需求。有需要的朋友欢迎fork修改。  
 本脚本目前采用的bee版本为0.6.1，下载运行update_bee.sh由**旧版本脚本**升级至0.6.1。  
-脚本默认采用全节点。
+脚本默认采用全节点。  
 注意！0.6.1版本的bee存在goroutine报错，见https://github.com/ethersphere/bee/issues/1837  
 
 ## 环境

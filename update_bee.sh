@@ -41,8 +41,8 @@ wget -O cashout.sh https://gist.githubusercontent.com/ralph-pichler/3b5ccd7a5c5c
 sed -i 's/10000000000000000/1/g' cashout.sh
 for ((i=1; i<=tCnt; i ++))
 do
-cp cashout.sh cashout${tCnt}.sh
-sed -i "s/1635/$((1634+${tCnt}))/g" cashout${tCnt}.sh
+cp cashout.sh cashout${i}.sh
+sed -i "s/1635/$((1634+${i}))/g" cashout${i}.sh
 screen -dmS bee$i
 screen -x -S bee$i -p 0 -X stuff "bee start --config node${i}.yaml"
 screen -x -S bee$i -p 0 -X stuff $'\n'

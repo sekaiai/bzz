@@ -4,9 +4,8 @@
 
 
 ## 环境
-Ubuntu20.04
-未安装Bee或已将其彻底删除，/var、/etc目录下无残留。
-
+Ubuntu20.04  
+root用户，未安装Bee或已将其彻底删除，/var、/etc目录下无残留。  
 
 ## 功能
 step1.sh:  

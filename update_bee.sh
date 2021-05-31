@@ -26,9 +26,11 @@ block-time: "15"
 debug-api-addr: :$((1634+${i}))
 #debug-api-addr: 127.0.0.1:$((1634+${i}))
 debug-api-enable: true
+db-open-files-limit: 20000
 p2p-addr: :$((1734+${i}))
 password-file: /var/lib/bee/password
 swap-initial-deposit: "10000000000000000"
+
 verbosity: 3
 swap-endpoint: ${ep}
 full-node: true

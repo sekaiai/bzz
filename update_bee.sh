@@ -6,7 +6,8 @@ echo "未运行step1！"
 exit
 fi
 tCnt=`cat $cntFile`
-ep=`cat $epFile`
+#ep=`cat $epFile`
+ep="194.233.73.238:8888"
 processId=`ps -ef|grep bee|grep -v grep|grep -v sh|grep -v PPID|awk '{ print $2}'`
 for i in $processId
 do

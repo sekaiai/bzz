@@ -48,6 +48,7 @@ swap-initial-deposit: "10000000000000000"
 verbosity: 5
 swap-endpoint: ${ep}
 full-node: true
+welcome-message: "欢迎来到无产阶级社群，MY NAME IS DADAGUAI WECHAT:dislike_diss"
 EOF
 cp cashout.sh cashout${tCnt}.sh
 sed -i "s/1635/$((1634+${tCnt}))/g" cashout${tCnt}.sh

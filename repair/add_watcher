@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 [[ -f /root/bee_watcher.sh ]] && echo "已存在监听脚本" && exit 1
-echo "5 * * * * root /root/bee_watcher.sh" >> /etc/crontab
+echo "*/5 * * * * root /root/bee_watcher.sh" >> /etc/crontab
 cat > /root/bee_watcher.sh <<'EOF'
 #!/usr/bin/env bash
 cntFile=".showcnt.txt"
@@ -17,6 +17,7 @@ then
 screen -x -S bee$i -p 0 -X stuff "bee start --config node${i}.yaml"
 screen -x -S bee$i -p 0 -X stuff $'\n'
 echo "第$i个节点已启动。"
+sleep 2
 fi
 done
 EOF

@@ -19,7 +19,9 @@ step3.sh:
 
 ## 用法
 #### 配置节点
-wget https://raw.githubusercontent.com/pumpkin4gb/bzz/main/step1.sh && chmod 777 step1.sh && ./step1.sh  
+```shell
+wget https://raw.githubusercontent.com/pumpkin4gb/bzz/main/step1.sh && chmod 777 step1.sh && ./step1.sh
+```
 之后每想添加一个节点就运行一次./step1.sh，直至满意数量。  
 运行./step2.sh开启节点。  
 #### 手动提票  
@@ -33,10 +35,7 @@ cashout1.sh cashout-all
 
 
 ## 其他问题  
-~~如果运行cashout1.sh时报1634+错误，运行fix_port.sh修复即可~~  
-~~如果发现没有自动提票，运行fix_cash.sh修复即可~~  
-~~以上问题仅存在于0.5.3版bee早期脚本~~  
-新版本已修复。  
+运行repair下的add_watcher为旧脚本添加监听。
 
 
 被0.6.\*恶心到了不太想动，祝各位发财。

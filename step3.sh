@@ -11,7 +11,7 @@ echo "节点${i}的端口为：${dpi_port}"
 echo "节点${i}的钱包地址和合约地址:"
 address=`curl -s localhost:${dpi_port}/addresses | jq .ethereum`
 echo "address:${address}"
-chequebook=`curl -s http://localhost:${dpi_port}/chequebook/address | jq .chequebookaddress`
+chequebook=`curl -s http://localhost:${dpi_port}/chequebook/address | jq .chequebookAddress`
 echo "chequebook:${chequebook}"
 echo "${ip},${i},${dpi_port},${address},${chequebook}" >> ${ip}.txt
 done

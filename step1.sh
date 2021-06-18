@@ -1,29 +1,55 @@
 #!/usr/bin/env bash
 cntFile=".showcnt.txt"
 epFile="epFile.txt"
+bee_url=https://github.com/ethersphere/bee/releases/download
+
 if [ ! -f $cntFile ]; then
-echo "首次使用脚本，进行初始化……"
-sudo apt-get update
-sudo apt-get install -y jq
-sudo apt-get install -y lrzsz
-sudo apt-get install -y screen
-sudo apt-get install -y net-tools
-wget https://github.com/ethersphere/bee/releases/download/v0.6.2/bee_0.6.2_amd64.deb
-wget -O cashout.sh https://gist.githubusercontent.com/ralph-pichler/3b5ccd7a5c5cd0500e6428752b37e975/raw/aa576d6d28b523ea6f5d4a1ffb3c8cc0bbc2677f/cashout.sh && chmod 777 cashout.sh
-wget https://raw.githubusercontent.com/pumpkin4gb/bzz/main/step2.sh && chmod 777 step2.sh
-wget https://raw.githubusercontent.com/pumpkin4gb/bzz/main/step3.sh && chmod 777 step3.sh
-sudo dpkg -i bee_0.6.2_amd64.deb && sudo chown -R bee:bee /var/lib/bee
-echo "0" > $cntFile
-chmod +rw $cntFile
-sed -i 's/10000000000000000/1/g' cashout.sh
-echo "请输入swap-endpoint链接，如https://goerli.infura.io/v3/12ecf******************:"
-read ep
-echo "${ep}" > $epFile
+  echo "首次使用脚本，进行初始化……"
+  echo "安装系统依赖包"
+  yum update
+  yum install -y epel-release
+  yum install -y screen jq wget net-tools tree chrony
+  echo "同步时间"
+  systemctl start chronyd.service && systemctl enable chronyd.service
+
+
+  wget -O cashout.sh https://gist.githubusercontent.com/ralph-pichler/3b5ccd7a5c5cd0500e6428752b37e975/raw/cashout.sh && chmod 777 cashout.sh
+  wget https://raw.githubusercontent.com/sekaiai/bzz/centos/step2.sh && chmod 777 step2.sh
+  wget https://raw.githubusercontent.com/sekaiai/bzz/centos/step3.sh && chmod 777 step3.sh
+
+  # 安装 bee-clef
+  wget https://github.com/ethersphere/bee-clef/releases/download/v0.4.12/bee-clef_0.4.12_arm64.rpm
+  sudo rpm -i bee-clef_0.4.12_arm64.rpm
+
+  # 安装 bee
+  # wget ${bee_url}/v0.6.2/bee_0.6.2_amd64.rpm
+  # sudo rpm -i bee_0.6.2_amd64.rpm && sudo chown -R bee:bee /var/lib/bee
+  # 安装bee
+  if ! type bee >/dev/null 2>&1; then
+    # 安装版本控制，都是安装amd64版本
+    bee_version=$1
+    if [ -z ${bee_version} ]; then
+      echo "缺少bee版本号，请确认后重新尝试"
+      exit 2
+    fi
+    wget ${bee_url}/v${bee_version}/bee_${bee_version}_amd64.rpm
+    sudo rpm -i bee_${bee_version}_amd64.rpm
+  fi
+  echo -n "bee 已安装版本: "
+
+
+  echo "0" > $cntFile
+  chmod +rw $cntFile
+  sed -i 's/10000000000000000/1/g' cashout.sh
+  echo "请输入swap-endpoint链接，如https://goerli.infura.io/v3/12ecf******************:"
+  read ep
+  echo "${ep}" > $epFile
 fi
+
 if [ $# == 1 ]; then
-if [ $1 == "resetcnt" ]; then
-echo "0" > $cntFile
-fi
+  if [ $1 == "resetcnt" ]; then
+  echo "0" > $cntFile
+  fi
 fi
 ep=`cat $epFile`
 tCnt=`cat $cntFile`

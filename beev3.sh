@@ -1,5 +1,4 @@
 #!/bin/bash
-echo "Mingc=Cash&无产阶级 微信：dhaidao 社群：dislike_diss SWARM掉线假死重启脚本 ";
 i=0
 while true
 do

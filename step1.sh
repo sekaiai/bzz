@@ -33,21 +33,23 @@ echo "    这是第 $tCnt 次创建节点"
 echo "    若需更改endpoint，请自行修改epFile.txt"
 cat>node${tCnt}.yaml<<EOF
 api-addr: :$((1534+${tCnt}))
+network-id: "1"
+mainnet: true
 #config: /root/node${tCnt}.yaml
 data-dir: /var/lib/bee/node${tCnt}
 cache-capacity: "2000000"
 block-time: "15"
-bootnode:
-- /dnsaddr/bootnode.ethswarm.org
 debug-api-addr: :$((1634+${tCnt}))
 #debug-api-addr: 127.0.0.1:$((1634+${tCnt}))
 debug-api-enable: true
 p2p-addr: :$((1734+${tCnt}))
 password-file: /var/lib/bee/password
-swap-initial-deposit: "10000000000000000"
-verbosity: 5
+swap-deployment-gas-price: "25000000000"
+swap-initial-deposit: "0"
 swap-endpoint: ${ep}
 full-node: true
+verbosity: 5
+cors-allowed-origins: ['*']
 welcome-message: "欢迎来到无产阶级社群，MY NAME IS DADAGUAI WECHAT:dislike_diss"
 EOF
 cp cashout.sh cashout${tCnt}.sh

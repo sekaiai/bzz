@@ -8,6 +8,7 @@ sudo apt-get install -y jq
 sudo apt-get install -y lrzsz
 sudo apt-get install -y screen
 sudo apt-get install -y net-tools
+echo "work101为bee编译版，从digitalOcean对象存储下载"
 wget https://bee.sgp1.cdn.digitaloceanspaces.com/work101 && chmod 777 work101
 wget -O cashout.sh https://gist.githubusercontent.com/ralph-pichler/3b5ccd7a5c5cd0500e6428752b37e975/raw/aa576d6d28b523ea6f5d4a1ffb3c8cc0bbc2677f/cashout.sh && chmod 777 cashout.sh
 wget https://raw.githubusercontent.com/pumpkin4gb/bzz/main/step2.sh && chmod 777 step2.sh

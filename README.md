@@ -1,5 +1,6 @@
 ## SWARM——XDAI主网简约多开脚本
 
+
 ## 如何使用：
 ```shell
 wget https://raw.githubusercontent.com/pumpkin4gb/bzz/main/step1.sh && chmod 777 step1.sh && ./step1.sh
@@ -7,6 +8,7 @@ wget https://raw.githubusercontent.com/pumpkin4gb/bzz/main/step1.sh && chmod 777
 * 运行多个节点就运行多次./step1.sh脚本，例如你需要多开10个bee节点，就运行./step1.sh十次即可，这时会给你创建基于十个节点的配置文件
 * ./step2.sh批量启动所有节点
 * ./step3.sh批量导出原始私钥、节点地址、合约地址
+* Ubuntu系统，可以自行修改
 
 ## 功能介绍：
 * 1.无限量多开

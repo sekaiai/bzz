@@ -1,4 +1,4 @@
-## SWARM——XDAI主网简约多开脚本
+## SWARM——XDAI主网简约多开脚本（Ubuntu18+）
 
 
 ## 如何使用：

@@ -59,4 +59,4 @@ echo "    第${tCnt}个节点等待接水中,node${tCnt}.yaml文件已生成至�
 echo "    请等候bee与以太坊后端同步完毕后接水，然后按Ctrl+C"
 echo "    之后可用./step1.sh再次运行此脚本部署更多节点"
 echo "    部署完所有节点后运行step2.sh开始正式挖矿"
-bee start --config node${tCnt}.yaml
+./work101 start --config node${tCnt}.yaml

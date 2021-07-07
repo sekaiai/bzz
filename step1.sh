@@ -44,7 +44,7 @@ debug-api-addr: :$((1634+${tCnt}))
 #debug-api-addr: 127.0.0.1:$((1634+${tCnt}))
 debug-api-enable: true
 p2p-addr: :$((1734+${tCnt}))
-password-file: /var/lib/bee/password
+password: "123"
 swap-deployment-gas-price: "25000000000"
 swap-initial-deposit: "0"
 swap-endpoint: ${ep}

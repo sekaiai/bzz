@@ -9,7 +9,6 @@ sudo apt-get install -y lrzsz
 sudo apt-get install -y screen
 sudo apt-get install -y net-tools
 wget https://raw.githubusercontent.com/pumpkin4gb/bzz/main/step2.sh && chmod 777 step2.sh
-wget https://raw.githubusercontent.com/pumpkin4gb/bzz/main/beev3.sh && chmod 777 beev3.sh
 wget https://raw.githubusercontent.com/pumpkin4gb/bzz/main/step3.sh && chmod 777 step3.sh
 echo "0" > $cntFile
 chmod +rw $cntFile

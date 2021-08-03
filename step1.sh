@@ -8,9 +8,6 @@ sudo apt-get install -y jq
 sudo apt-get install -y lrzsz
 sudo apt-get install -y screen
 sudo apt-get install -y net-tools
-echo "work101为bee编译版，从digitalOcean对象存储下载"
-wget https://bee.sgp1.cdn.digitaloceanspaces.com/bee/work101 && chmod 777 work101
-wget -O cashout.sh https://gist.githubusercontent.com/ralph-pichler/3b5ccd7a5c5cd0500e6428752b37e975/raw/aa576d6d28b523ea6f5d4a1ffb3c8cc0bbc2677f/cashout.sh && chmod 777 cashout.sh
 wget https://raw.githubusercontent.com/pumpkin4gb/bzz/main/step2.sh && chmod 777 step2.sh
 wget https://raw.githubusercontent.com/pumpkin4gb/bzz/main/beev3.sh && chmod 777 beev3.sh
 wget https://raw.githubusercontent.com/pumpkin4gb/bzz/main/step3.sh && chmod 777 step3.sh
@@ -45,8 +42,6 @@ debug-api-addr: :$((1634+${tCnt}))
 debug-api-enable: true
 p2p-addr: :$((1734+${tCnt}))
 password: "123"
-swap-deployment-gas-price: "25000000000"
-swap-initial-deposit: "0"
 swap-endpoint: ${ep}
 full-node: true
 verbosity: 5

@@ -33,7 +33,7 @@ api-addr: :$((1534+${tCnt}))
 network-id: "1"
 mainnet: true
 #config: /root/node${tCnt}.yaml
-data-dir: /var/lib/bee/node${tCnt}
+data-dir: /opt/bee/node${tCnt}
 cache-capacity: "2000000"
 block-time: "15"
 debug-api-addr: :$((1634+${tCnt}))
